@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>💳 Klook Taipei Pass Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module">
+    import Alpine from "https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/module.esm.min.js";
+    import createStores from "./stores.js";
+    import { installGlobally } from "./utilities.js";
+
+    createStores();
+    installGlobally();
+
+    window.Alpine = Alpine;
+    Alpine.start();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+  <style>
+    body {
+      /* Have a wider display for desktop windows */
+      max-width: 1200px;
+    }
+    label {
+      /* Align labels better with checkboxes */
+      display: inline;
+      vertical-align: unset;
+    }
+    .column-container {
+      /* Auto-sizing two column layout */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+      gap: 1rem;
+    }
+    .activities-table {
+      max-height: 40vh; 
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>💳 Klook Taipei Pass Calculator</h1>
+  <details open>
+    <summary>About this site</summary>
+    <p>
+      <a href="https://www.klook.com" target="_blank">Klook</a> offers a <a href="https://www.klook.com/activity/78618-taipei-attractions-pass" target="_blank">Klook Taipei Pass</a> that allows access to 2-5 activities in Taipei for a bundle price. There are two types of passes, Standard and Premium, and each pass is valid for 2-5 activities. A Standard pass is only valid for 19 Standard activities, while a Premium pass is valid for an additional 12 Premium activities.
+    </p>
+    <p>
+      This is a simple tool to help you:
+      <ol>
+        <li>Choose which activities you are interested in</li>
+        <li>Figure out which pass can be used for your chosen activties</li>
+        <li>Calculate how much you can save with the pass <em>or</em> if you should book your chosen activities seperately</li>
+      </ol>
+    </p>
+    <h2>How to use this site</h2>
+    <ol>
+      <li>Look through the list of activities in thetable below or on the <a href="https://www.klook.com/activity/78618-taipei-attractions-pass" target="_blank">Klook Taipei Pass</a> webpage.</li>
+      <li>Choose two or more activities by checking the checkbox in the <em>Choice</em> column in the Choices table. Your choices will show up in the <em>Chosen activities</em> section. To remove a chosen activity, uncheck the checkbox beside the activity name. You can only select a maximum of 5 activities.</li>
+      <li>The <em>Suggested pass</em> section will recommend a pass, as well as the potential savings over booking each activity seperately.</li>
+    </ol>
+    <h2>Available pass types</h2>
+    <div x-data class="column-container">
+      <template x-for="type in $store.passes.types" :key="type">
+        <div>
+          <h3 x-text="type"></h3>
+          <ul>
+            <template x-for="pass in $store.passes.getPassesOfType(type)">
+              <li>
+                <span x-text="pass.num_acts"></span> activities, <span x-text="pass.price"></span> NTD
+              </li>
+            </template>
+          </ul>
+        </div>
+      </template>
+    </div>
+  </details>
+
+  <section class="column-container" x-data>
+    <div>
+      <h2>Chosen activities</h2>
+      <ul>
+        <template x-if="$store.chosen.length">
+          <div>
+            <template x-for="choiceName in $store.chosen" :key="choiceName">
+              <li><input type="checkbox" :name="choiceName" x-model="$store.chosen" :value="choiceName"><label :for="choiceName" x-text="choiceName"></label> (<span x-text="$store.choices.getChoice(choiceName).Price"></span> NTD)</li>
+            </template>
+            <button style="margin-top: 1rem;" type="button" @click="$store.chosen = []">Clear all choices</button>
+          </div>
+        </template>
+        <template x-if="$store.chosen.length == 0">
+          <li>None chosen yet</li>
+        </template>
+      </ul>
+    </div>
+    <div>
+      <h2>Suggested pass</h2>
+      <template x-if="$store.chosen.length < 2">
+        <ul>
+          <li>Choose two or more activities for this site to recommend a pass.</li>
+        </ul>
+      </template>
+      <template x-if="$store.chosen.length >= 2">
+        <ul>
+          <li><span x-text="getPassForChoices($store.chosen).type"></span> for <span x-text="getPassForChoices($store.chosen).num_acts"></span> activties, <span x-text="getPassForChoices($store.chosen).price"></span> NTD</li>
+            <template x-if="getPassSavingsForChoices($store.chosen, getPassForChoices($store.chosen)) >= 0">
+              <li>👍 Potential savings: <span x-text="getPassSavingsForChoices($store.chosen, getPassForChoices($store.chosen))"></span> NTD</li>
+            </template>
+            <template x-if="getPassSavingsForChoices($store.chosen, getPassForChoices($store.chosen)) < 0">
+              <li>👎 <strong>You should not buy this pass for these choices</strong>, it will cost <span x-text="-getPassSavingsForChoices($store.chosen, getPassForChoices($store.chosen))"></span> NTD more than booking the activities seperately.</li>
+            </template>
+        </ul>
+      </template>
+      <h3>Suggestions</h3>
+      <button
+        type="button"
+        @click="$store.chosen = $store.choices.getTopChoicesInCategory('Standard', 5).map((c) => c.Choice)"
+      >Standard pass with most savings</button>
+      <button
+        type="button"
+        @click="$store.chosen = $store.choices.getTopChoicesInCategory('Premium', 5).map((c) => c.Choice)"
+      >Premium pass with most savings</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Activities</h2>
+    <div x-data="{ 'showCategories': ['Standard', 'Premium'], search: '' }">
+      <h3>Filter by (showing: <span x-text="showCategories.join(', ')"></span>)</h3>
+      <button type="button" @click="showCategories = ['Standard', 'Premium']">All</button>
+      <button type="button" @click="showCategories = ['Standard']">Standard</button>
+      <button type="button" @click="showCategories = ['Premium']">Premium</button>
+      <input style="display: inline;" x-model="search" type="input" placeholder="Search for activity">
+      <div class="activities-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Package option</th>
+              <th>Price</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <template x-for="choice in $store.choices.filterChoices(showCategories, search)" :key="choice.Choice">
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    x-model="$store.chosen"
+                    :value="choice.Choice"
+                    :disabled="$store.chosen.length == 5 && !$store.chosen.includes(choice.Choice)"
+                  ><a :href="choice.URL" target="_blank" x-text="choice.Choice"></a>
+                </td>
+                <td x-text="choice['Package option']"></td>
+                <td><span x-text="choice.Price"></span> NTD</td>
+                <td x-text="choice.Category"></td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+  <section>
+    <p>
+      Made by <a href="https://www.beyondthesprawl.com" target="_blank">Tan Zhen Yong</a>.<br>
+      Information on this page was last updated 31 July 2023.<br>
+      All prices and information should always be verified with the <a href="https://www.klook.com/activity/78618-taipei-attractions-pass" target="_blank">official Klook website</a> and the respective attraction websites.
+    </p>
+  </section>
+</body>
+</html>
