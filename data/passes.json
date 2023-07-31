@@ -1,13 +1,13 @@
 {
   "passTypes": ["Standard", "Premium"],
   "passes": [
-    {"type": "Standard", "num_acts": 2, "price": 530},
-    {"type": "Standard", "num_acts": 3, "price": 870},
-    {"type": "Standard", "num_acts": 4, "price": 990},
-    {"type": "Standard", "num_acts": 5, "price": 1050},
-    {"type": "Premium", "num_acts": 2, "price": 1050},
-    {"type": "Premium", "num_acts": 3, "price": 1680},
-    {"type": "Premium", "num_acts": 4, "price": 2150},
-    {"type": "Premium", "num_acts": 5, "price": 2600}
+    {"type": "Standard", "num_acts": 2, "price": 520},
+    {"type": "Standard", "num_acts": 3, "price": 710},
+    {"type": "Standard", "num_acts": 4, "price": 870},
+    {"type": "Standard", "num_acts": 5, "price": 1080},
+    {"type": "Premium", "num_acts": 2, "price": 1080},
+    {"type": "Premium", "num_acts": 3, "price": 1450},
+    {"type": "Premium", "num_acts": 4, "price": 1730},
+    {"type": "Premium", "num_acts": 5, "price": 1980}
   ]
 }
