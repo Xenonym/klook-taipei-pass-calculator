@@ -1,3 +1,5 @@
+import dayjs from "https://cdn.jsdelivr.net/npm/dayjs@1/+esm";
+
 export function getChoicesFromNames(choiceNames) {
   return choiceNames.map(
     (name) => Alpine.store('choices').getChoice(name)
@@ -22,8 +24,14 @@ export function getPassSavingsForChoices(choiceNames, pass) {
   return choiceTotalPrice - pass.price;
 }
 
+export function formatDate(date, format = "D MMM YYYY") {
+  if (!date) return '';
+
+  return dayjs(date).format(format);
+}
+
 export function installGlobally() {
-  const functions = [getChoicesFromNames, getPassForChoices, getChoicesTotalPrice, getPassSavingsForChoices];
+  const functions = [getChoicesFromNames, getPassForChoices, getChoicesTotalPrice, getPassSavingsForChoices, formatDate];
   for (const func of functions) {
     window[func.name] = func;
   }

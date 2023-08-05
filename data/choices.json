@@ -1,219 +1,215 @@
-[
-  {
-    "Choice": "Leofoo Village Theme Park Ticket",
-    "Package option": "One-Day Admission Ticket",
-    "Price": 840,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/3328-leofoo-village-theme-park-taipei/"
-  },
-  {
-    "Choice": "Yehliu Geopark, Jiufen, Shifen, and Golden Waterfall Day Tour",
-    "Package option": "Day Tour: Yehliu & Shifen & Jiufen",
-    "Price": 793,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/76306-yehliu-jiufen-shifen-golden-waterfall-day-tour/"
-  },
-  {
-    "Choice": "New Taipei: Public Bath and Private Bath with View at Hot Volando Urai Spring Spa & Resort",
-    "Package option": "2022-23 - High Season Weekday - Public Bath - No meals",
-    "Price": 695,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/825-volando-urai-hot-spring-taipei"
-  },
-  {
-    "Choice": "LOHAS Taiwanese Foot Massage in Taipei",
-    "Package option": "Head, Neck, and Shoulder Massage + Foot Massage (55 minutes)",
-    "Price": 680,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/30360-lohas-taiwanese-foot-massage-taipei"
-  },
-  {
-    "Choice": "i-Ride Taipei Flying Cinema Experience Center Ticket",
-    "Package option": "i-Ride Taipei Flying Cinema Experience Center Ticket",
-    "Price": 600,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/21048-i-ride-flying-cinema-experience-center-taipei/"
-  },
-  {
-    "Choice": "Taipei 101 Observatory Ticket",
-    "Package option": "89F Observatory Ticket",
-    "Price": 600,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/1659-taipei-101-taipei/"
-  },
-  {
-    "Choice": "Dynasty Massage in Taipei",
-    "Package option": "Foot Massage 40 Minutes",
-    "Price": 559,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/55200-taipei-dynasty-massage-experience/"
-  },
-  {
-    "Choice": "Taipei Double Decker Sightseeing Bus Ticket",
-    "Package option": "24-Hour Pass",
-    "Price": 540,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/2921-double-decker-bus-tour-taipei"
-  },
-  {
-    "Choice": "Spring City Resort Hot Spring in Taipei",
-    "Package option": "Public Spa or Bathhouse",
-    "Price": 529,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/7950-spring-city-resort-beitou-hot-spring-spa-taipei/"
-  },
-  {
-    "Choice": "EasyCard (TPE Airport Pick Up)",
-    "Package option": "EasyCard with TWD400 Deposit - No SIM Card",
-    "Price": 500,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/5777-public-transport-easycard-taipei/"
-  },
-  {
-    "Choice": "Forest SPA Linsen Massage in Taipei",
-    "Package option": "Foot Massage 35 Minutes",
-    "Price": 499,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/65785-forestspa-taipei/"
-  },
-  {
-    "Choice": "Stone Spa at Xian Zhi Tan in (Phone Reservation Required)",
-    "Package option": "Individual dome-shaped bedrock bath (60 minutes)",
-    "Price": 399,
-    "Category": "Premium",
-    "URL": "https://www.klook.com/activity/66425-stone-spa-taipei/"
-  },
-  {
-    "Choice": "Taipei: Yuanshan West Secret Road Guided Tour",
-    "Package option": "Guided tour of West Secret Road (free Garden Cafe voucher $200)",
-    "Price": 360,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/88020-the-grand-hotel-taipei-west-secret-passage-tour-taipei"
-  },
-  {
-    "Choice": "National Palace Museum Ticket",
-    "Package option": "National Palace Museum Taipei Ticket (Enjoy a 10% discount on purchases at Gift Shop)",
-    "Price": 350,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/10136-national-palace-museum-ticket-package-taipei"
-  },
-  {
-    "Choice": "Maokong Gondola",
-    "Package option": "Maokong Gondola One Day Ticket (Unlimited Day Pass) + Taipei Zoo Ticket",
-    "Price": 280,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/16000-maokong-gondola-combo-ticket-taipei/"
-  },
-  {
-    "Choice": "Taoyuan Airport MRT Ticket & Exclusive Shopping Coupon (for non-Taiwanese nationals only)",
-    "Package option": "Round-trip ticket",
-    "Price": 265,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/11346-taoyuan-airport-mrt-ticket-taipei"
-  },
-  {
-    "Choice": "Lin Dong Fang Beef Noodles: Beef Noodles Set (Small)",
-    "Package option": "Beef Noodles Set (Small)",
-    "Price": 250,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/15870-lin-dong-fang-taipei/"
-  },
-  {
-    "Choice": "Sky Lantern Experience in Shifen Old Street",
-    "Package option": "Colorful Sky Lantern - Sky Lantern Experience Voucher",
-    "Price": 250,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/90102-sky-lantern-experience-new-taipei/"
-  },
-  {
-    "Choice": "Taoyuan Airport (TPE) Kuo-Kuang Round Trip Bus Tickets",
-    "Package option": "Kuo-Kuang Bus 1819 (Taoyuan Airport - Kuo-Kuang Bus Taipei Terminal) Round Trip Ticket",
-    "Price": 240,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/16786-taoyuan-airport-kuo-kuang-bus-tickets-taipei"
-  },
-  {
-    "Choice": "Miniatures Museum of Taiwan Ticket",
-    "Package option": "Adult Ticket",
-    "Price": 219,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/15528-miniatures-museum-taiwan-ticket-taipei/"
-  },
-  {
-    "Choice": "Taipei Children's Amusement Park 1-Day Pass",
-    "Package option": "One Day Pass (Unlimited rides on 13 attractions)",
-    "Price": 179,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/32301-taipei-childrens-amusement-park-one-day-pass"
-  },
-  {
-    "Choice": "Taipei: Miramar Ferris Wheel Ticket",
-    "Package option": "Admission Ticket",
-    "Price": 170,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/17764-miramar-entertainment-park-ferris-wheel-taipei"
-  },
-  {
-    "Choice": "National Museum of Marine Science and Technology Ticket in Keelung",
-    "Package option": "Main Exhibition Building Admission Ticket",
-    "Price": 160,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/27336-national-museum-marine-science-technology-taipei/"
-  },
-  {
-    "Choice": "Beitou Museum Ticket",
-    "Package option": "Tickets for Beitou Cultural Heritage Museum",
-    "Price": 120,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/47816-beitou-museum-ticket-taipei/"
-  },
-  {
-    "Choice": "Yehliu Geopark Ticket",
-    "Package option": "Admission ticket",
-    "Price": 120,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/9548-yehliu-geopark-admission-ticket-taipei"
-  },
-  {
-    "Choice": "Chiang Kai-Shek Shilin Residence Main Building Ticket",
-    "Package option": "Chiang Kai-Shek Shilin Residence Main Building Ticket",
-    "Price": 95,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/34995-chiang-kai-shek-shilin-residence-main-building-ticket-taipei"
-  },
-  {
-    "Choice": "Tamsui Historical Museum Ticket",
-    "Package option": "Tamsui Historical Museum Ticket",
-    "Price": 80,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/27150-tamsui-historical-museum-ticket-taipei/"
-  },
-  {
-    "Choice": "New Taipei Gold Museum E-Ticket",
-    "Package option": "Gold Museum Ticket",
-    "Price": 80,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/23270-gold-museum-packed-lunch-taipei/"
-  },
-  {
-    "Choice": "Ay-Chung Flour-Rice Noodle",
-    "Package option": "Flour-Rice Noodle (Large)",
-    "Price": 75,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/10451-ay-chung-flour-rice-noodle-taipei/"
-  },
-  {
-    "Choice": "Shi Yun Taiwanese Fried Chicken: Fried Chicken (1 Pack)",
-    "Package option": "Fried Chicken (1 Pack)",
-    "Price": 63,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/24122-shi-yun-fried-chicken-taipei/"
-  },
-  {
-    "Choice": "Taipei Zoo Ticket",
-    "Package option": "Regular Ticket",
-    "Price": 60,
-    "Category": "Standard",
-    "URL": "https://www.klook.com/activity/34262-maokong-gondola-taipei-zoo-tickets/"
-  }
-]
+{
+  "last_updated": "2023-08-05",
+  "choices": [
+    {
+      "Choice": "Leofoo Village Theme Park Ticket",
+      "Package option": "One-Day Admission Ticket",
+      "Price": 840,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/3328-leofoo-village-theme-park-taipei/"
+    },
+    {
+      "Choice": "Yehliu Geopark, Jiufen, Shifen, and Golden Waterfall Day Tour",
+      "Package option": "Day Tour: Yehliu & Shifen & Jiufen",
+      "Price": 793,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/76306-yehliu-jiufen-shifen-golden-waterfall-day-tour/"
+    },
+    {
+      "Choice": "LOHAS Taiwanese Foot Massage in Taipei",
+      "Package option": "Head, Neck, and Shoulder Massage + Foot Massage (55 minutes)",
+      "Price": 680,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/30360-lohas-taiwanese-foot-massage-taipei"
+    },
+    {
+      "Choice": "i-Ride Taipei Flying Cinema Experience Center Ticket",
+      "Package option": "i-Ride Taipei Flying Cinema Experience Center Ticket",
+      "Price": 600,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/21048-i-ride-flying-cinema-experience-center-taipei/"
+    },
+    {
+      "Choice": "Taipei 101 Observatory Ticket",
+      "Package option": "89F Observatory Ticket",
+      "Price": 600,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/1659-taipei-101-taipei/"
+    },
+    {
+      "Choice": "Dynasty Massage in Taipei",
+      "Package option": "Foot Massage 40 Minutes",
+      "Price": 559,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/55200-taipei-dynasty-massage-experience/"
+    },
+    {
+      "Choice": "Taipei Double Decker Sightseeing Bus Ticket",
+      "Package option": "24-Hour Pass",
+      "Price": 540,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/2921-double-decker-bus-tour-taipei"
+    },
+    {
+      "Choice": "Spring City Resort Hot Spring in Taipei",
+      "Package option": "Public Spa or Bathhouse",
+      "Price": 529,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/7950-spring-city-resort-beitou-hot-spring-spa-taipei/"
+    },
+    {
+      "Choice": "EasyCard (TPE Airport Pick Up)",
+      "Package option": "EasyCard with TWD400 Deposit - No SIM Card",
+      "Price": 500,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/5777-public-transport-easycard-taipei/"
+    },
+    {
+      "Choice": "Forest SPA Linsen Massage in Taipei",
+      "Package option": "Foot Massage 35 Minutes",
+      "Price": 499,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/65785-forestspa-taipei/"
+    },
+    {
+      "Choice": "Stone Spa at Xian Zhi Tan in (Phone Reservation Required)",
+      "Package option": "Individual dome-shaped bedrock bath (60 minutes)",
+      "Price": 399,
+      "Category": "Premium",
+      "URL": "https://www.klook.com/activity/66425-stone-spa-taipei/"
+    },
+    {
+      "Choice": "Taipei: Yuanshan West Secret Road Guided Tour",
+      "Package option": "Guided tour of West Secret Road (free Garden Cafe voucher $200)",
+      "Price": 360,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/88020-the-grand-hotel-taipei-west-secret-passage-tour-taipei"
+    },
+    {
+      "Choice": "National Palace Museum Ticket",
+      "Package option": "National Palace Museum Taipei Ticket (Enjoy a 10% discount on purchases at Gift Shop)",
+      "Price": 350,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/10136-national-palace-museum-ticket-package-taipei"
+    },
+    {
+      "Choice": "Maokong Gondola",
+      "Package option": "Maokong Gondola One Day Ticket (Unlimited Day Pass) + Taipei Zoo Ticket",
+      "Price": 280,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/16000-maokong-gondola-combo-ticket-taipei/"
+    },
+    {
+      "Choice": "Taoyuan Airport MRT Ticket & Exclusive Shopping Coupon (for non-Taiwanese nationals only)",
+      "Package option": "Round-trip ticket",
+      "Price": 265,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/11346-taoyuan-airport-mrt-ticket-taipei"
+    },
+    {
+      "Choice": "Lin Dong Fang Beef Noodles: Beef Noodles Set (Small)",
+      "Package option": "Beef Noodles Set (Small)",
+      "Price": 250,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/15870-lin-dong-fang-taipei/"
+    },
+    {
+      "Choice": "Sky Lantern Experience in Shifen Old Street",
+      "Package option": "Colorful Sky Lantern - Sky Lantern Experience Voucher",
+      "Price": 250,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/90102-sky-lantern-experience-new-taipei/"
+    },
+    {
+      "Choice": "Taoyuan Airport (TPE) Kuo-Kuang Round Trip Bus Tickets",
+      "Package option": "Kuo-Kuang Bus 1819 (Taoyuan Airport - Kuo-Kuang Bus Taipei Terminal) Round Trip Ticket",
+      "Price": 240,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/16786-taoyuan-airport-kuo-kuang-bus-tickets-taipei"
+    },
+    {
+      "Choice": "Miniatures Museum of Taiwan Ticket",
+      "Package option": "Adult Ticket",
+      "Price": 219,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/15528-miniatures-museum-taiwan-ticket-taipei/"
+    },
+    {
+      "Choice": "Taipei Children's Amusement Park 1-Day Pass",
+      "Package option": "One Day Pass (Unlimited rides on 13 attractions)",
+      "Price": 179,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/32301-taipei-childrens-amusement-park-one-day-pass"
+    },
+    {
+      "Choice": "Taipei: Miramar Ferris Wheel Ticket",
+      "Package option": "Admission Ticket",
+      "Price": 170,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/17764-miramar-entertainment-park-ferris-wheel-taipei"
+    },
+    {
+      "Choice": "National Museum of Marine Science and Technology Ticket in Keelung",
+      "Package option": "Main Exhibition Building Admission Ticket",
+      "Price": 160,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/27336-national-museum-marine-science-technology-taipei/"
+    },
+    {
+      "Choice": "Beitou Museum Ticket",
+      "Package option": "Tickets for Beitou Cultural Heritage Museum",
+      "Price": 120,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/47816-beitou-museum-ticket-taipei/"
+    },
+    {
+      "Choice": "Yehliu Geopark Ticket",
+      "Package option": "Admission ticket",
+      "Price": 120,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/9548-yehliu-geopark-admission-ticket-taipei"
+    },
+    {
+      "Choice": "Chiang Kai-Shek Shilin Residence Main Building Ticket",
+      "Package option": "Chiang Kai-Shek Shilin Residence Main Building Ticket",
+      "Price": 95,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/34995-chiang-kai-shek-shilin-residence-main-building-ticket-taipei"
+    },
+    {
+      "Choice": "Tamsui Historical Museum Ticket",
+      "Package option": "Tamsui Historical Museum Ticket",
+      "Price": 80,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/27150-tamsui-historical-museum-ticket-taipei/"
+    },
+    {
+      "Choice": "New Taipei Gold Museum E-Ticket",
+      "Package option": "Gold Museum Ticket",
+      "Price": 80,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/23270-gold-museum-packed-lunch-taipei/"
+    },
+    {
+      "Choice": "Ay-Chung Flour-Rice Noodle",
+      "Package option": "Flour-Rice Noodle (Large)",
+      "Price": 75,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/10451-ay-chung-flour-rice-noodle-taipei/"
+    },
+    {
+      "Choice": "Shi Yun Taiwanese Fried Chicken: Fried Chicken (1 Pack)",
+      "Package option": "Fried Chicken (1 Pack)",
+      "Price": 63,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/24122-shi-yun-fried-chicken-taipei/"
+    },
+    {
+      "Choice": "Taipei Zoo Ticket",
+      "Package option": "Regular Ticket",
+      "Price": 60,
+      "Category": "Standard",
+      "URL": "https://www.klook.com/activity/34262-maokong-gondola-taipei-zoo-tickets/"
+    }
+  ]
+}

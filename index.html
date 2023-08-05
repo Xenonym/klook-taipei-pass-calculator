@@ -165,10 +165,13 @@
   </section>
 
   <hr>
-  <section>
+  <section 
+    x-data="{ lastUpdated: '' }"
+    x-effect="lastUpdated = Math.max($store.choices.last_updated, $store.passes.last_updated)"
+  >
     <p>
       Made by <a href="https://www.beyondthesprawl.com" target="_blank">Tan Zhen Yong</a>.<br>
-      Information on this page was last updated 31 July 2023.<br>
+      Information on this page was last updated <span x-text="formatDate(lastUpdated)"></span>.<br>
       All prices and information should always be verified with the <a href="https://www.klook.com/activity/78618-taipei-attractions-pass" target="_blank">official Klook website</a> and the respective attraction websites.
     </p>
   </section>

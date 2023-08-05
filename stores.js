@@ -2,8 +2,12 @@ function getChoicesData() {
   return fetch('./data/choices.json').then((response) => response.json());
 }
 const choices = {
+  all: [],
+  last_updated: null,
   async init() {
-    this.all = (await getChoicesData()).sort((c1, c2) => c2.Price - c1.Price);
+    const data = await getChoicesData()
+    this.all = data.choices.sort((c1, c2) => c2.Price - c1.Price);
+    this.last_updated = new Date(Date.parse(data.last_updated));
   },
   getChoice(name) {
     return this.all.find((choice) => choice.Choice === name);
@@ -21,18 +25,21 @@ const choices = {
         const searchables = [choice.Choice.toLowerCase(), choice['Package option'].toLowerCase()];
         return searchables.some((s) => s.includes(search.toLowerCase()));
       });
-  },
-  all: []
+  }
 }
 
 function getPassesData() {
   return fetch('./data/passes.json').then((response) => response.json());
 }
 const passes = {
+  all: [],
+  types: [],
+  last_updated: null,
   async init() {
     const data = await getPassesData();
     this.all = data.passes;
-    this.types = data.passTypes;
+    this.types = data.pass_types;
+    this.last_updated = new Date(Date.parse(data.last_updated));
   },
   getPassesOfType(type) {
     return this.all.filter((p) => p.type === type);
@@ -41,8 +48,6 @@ const passes = {
     const requiredPassType = choices.some((c) => c.Category === 'Premium') ? 'Premium' : 'Standard';
     return this.all.find((p) => p.type === requiredPassType && p.num_acts === choices.length);
   },
-  all: [],
-  types: []
 }
 
 const chosen = [];

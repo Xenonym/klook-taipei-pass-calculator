@@ -1,5 +1,6 @@
 {
-  "passTypes": ["Standard", "Premium"],
+  "last_updated": "2023-08-05",
+  "pass_types": ["Standard", "Premium"],
   "passes": [
     {"type": "Standard", "num_acts": 2, "price": 520},
     {"type": "Standard", "num_acts": 3, "price": 710},
