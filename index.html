@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module">
-    import Alpine from "https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/module.esm.min.js";
+    import Alpine from "https://cdn.jsdelivr.net/npm/alpinejs@3/+esm";
     import createStores from "./stores.js";
     import { installGlobally } from "./utilities.js";
 
@@ -126,7 +126,7 @@
 
   <section>
     <h2>Activities</h2>
-    <div x-data="{ 'showCategories': ['Standard', 'Premium'], search: '' }">
+    <div x-data="{ showCategories: ['Standard', 'Premium'], search: '' }">
       <h3>Filter by (showing: <span x-text="showCategories.join(', ')"></span>)</h3>
       <button type="button" @click="showCategories = ['Standard', 'Premium']">All</button>
       <button type="button" @click="showCategories = ['Standard']">Standard</button>
