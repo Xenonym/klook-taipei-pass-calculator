@@ -80,46 +80,58 @@
   <section class="column-container" x-data>
     <div>
       <h2>Chosen activities</h2>
-      <ul>
-        <template x-if="$store.chosen.length">
+        <template x-if="$store.chosen.all.length">
           <div>
-            <template x-for="choiceName in $store.chosen" :key="choiceName">
-              <li><input type="checkbox" :name="choiceName" x-model="$store.chosen" :value="choiceName"><label :for="choiceName" x-text="choiceName"></label> (<span x-text="$store.choices.getChoice(choiceName).Price"></span> NTD)</li>
-            </template>
-            <button style="margin-top: 1rem;" type="button" @click="$store.chosen = []">Clear all choices</button>
+            <ul>
+              <template x-for="choiceName in $store.chosen.all" :key="choiceName">
+                <li>
+                  <input
+                    type="checkbox"
+                    :name="choiceName"
+                    x-model="$store.chosen.all"
+                    :value="choiceName"
+                  ><label 
+                    :for="choiceName"
+                    x-text="choiceName"
+                  ></label> (<span x-text="$store.choices.getChoice(choiceName).Price"></span> NTD)
+                </li>
+              </template>
+            </ul>
+            <button style="margin-top: 1rem;" type="button" @click="$store.chosen.clear()">Clear all choices</button>
           </div>
         </template>
-        <template x-if="$store.chosen.length == 0">
-          <li>None chosen yet</li>
+        <template x-if="$store.chosen.all.length == 0">
+          <ul>
+            <li>None chosen yet</li>
+          </ul>
         </template>
-      </ul>
     </div>
     <div>
       <h2>Suggested pass</h2>
-      <template x-if="$store.chosen.length < 2">
+      <template x-if="$store.chosen.all.length < 2">
         <ul>
           <li>Choose two or more activities for this site to recommend a pass.</li>
         </ul>
       </template>
-      <template x-if="$store.chosen.length >= 2">
+      <template x-if="$store.chosen.all.length >= 2">
         <ul>
-          <li><span x-text="getPassForChoices($store.chosen).type"></span> for <span x-text="getPassForChoices($store.chosen).num_acts"></span> activties, <span x-text="getPassForChoices($store.chosen).price"></span> NTD</li>
-            <template x-if="getPassSavingsForChoices($store.chosen, getPassForChoices($store.chosen)) >= 0">
-              <li>👍 Potential savings: <span x-text="getPassSavingsForChoices($store.chosen, getPassForChoices($store.chosen))"></span> NTD</li>
+          <li><span x-text="$store.chosen.getPassForChoices().type"></span> for <span x-text="$store.chosen.getPassForChoices().num_acts"></span> activties, <span x-text="$store.chosen.getPassForChoices().price"></span> NTD</li>
+            <template x-if="$store.chosen.getPassSavings() >= 0">
+              <li>👍 Potential savings: <span x-text="$store.chosen.getPassSavings()"></span> NTD</li>
             </template>
-            <template x-if="getPassSavingsForChoices($store.chosen, getPassForChoices($store.chosen)) < 0">
-              <li>👎 <strong>You should not buy this pass for these choices</strong>, it will cost <span x-text="-getPassSavingsForChoices($store.chosen, getPassForChoices($store.chosen))"></span> NTD more than booking the activities seperately.</li>
+            <template x-if="$store.chosen.getPassSavings() < 0">
+              <li>👎 <strong>You should not buy this pass for these choices</strong>, it will cost <span x-text="-$store.chosen.getPassSavings()"></span> NTD more than booking the activities seperately.</li>
             </template>
         </ul>
       </template>
       <h3>Suggestions</h3>
       <button
         type="button"
-        @click="$store.chosen = $store.choices.getTopChoicesInCategory('Standard', 5).map((c) => c.Choice)"
+        @click="$store.chosen.all = $store.choices.getTopChoicesInCategory('Standard', 5).map((c) => c.Choice)"
       >Standard pass with most savings</button>
       <button
         type="button"
-        @click="$store.chosen = $store.choices.getTopChoicesInCategory('Premium', 5).map((c) => c.Choice)"
+        @click="$store.chosen.all = $store.choices.getTopChoicesInCategory('Premium', 5).map((c) => c.Choice)"
       >Premium pass with most savings</button>
     </div>
   </section>
@@ -148,9 +160,9 @@
                 <td>
                   <input
                     type="checkbox"
-                    x-model="$store.chosen"
+                    x-model="$store.chosen.all"
                     :value="choice.Choice"
-                    :disabled="$store.chosen.length == 5 && !$store.chosen.includes(choice.Choice)"
+                    :disabled="$store.chosen.all.length == 5 && !$store.chosen.all.includes(choice.Choice)"
                   ><a :href="choice.URL" target="_blank" x-text="choice.Choice"></a>
                 </td>
                 <td x-text="choice['Package option']"></td>

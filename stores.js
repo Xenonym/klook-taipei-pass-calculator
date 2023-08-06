@@ -12,6 +12,9 @@ const choices = {
   getChoice(name) {
     return this.all.find((choice) => choice.Choice === name);
   },
+  getChoices(names) {
+    return this.all.filter((choice) => names.some((name) => choice.Choice === name));
+  },
   getChoicesInCategory(category) {
     return this.all.filter((choice) => choice.Category === category);
   },
@@ -41,19 +44,39 @@ const passes = {
     this.types = data.pass_types;
     this.last_updated = new Date(Date.parse(data.last_updated));
   },
+  getPass(type, numActs) {
+    return this.all.find((p) => p.type === type && p.num_acts === numActs);
+  },
   getPassesOfType(type) {
     return this.all.filter((p) => p.type === type);
   },
-  getPassForChoices(choices) {
-    const requiredPassType = choices.some((c) => c.Category === 'Premium') ? 'Premium' : 'Standard';
-    return this.all.find((p) => p.type === requiredPassType && p.num_acts === choices.length);
-  },
 }
 
-const chosen = [];
+const chosen = {
+  all: [],
+  clear() {
+    this.all = [];
+  },
+  getTotalPrice() {
+    const choiceInfo = choices.getChoices(this.all);
+    return choiceInfo.reduce((total, current) => total + current.Price, 0);
+  },
+  getPassForChoices() {
+    if (this.all.length < 2) {
+      // No valid pass for less than two chosen activities.
+      return {'type': 'Invalid', num_acts: 0, price: 0}
+    }
+
+    const requiredPassType = this.all.some((c) => choices.getChoice(c).Category === 'Premium') ? 'Premium' : 'Standard';
+    return passes.getPass(requiredPassType, this.all.length);
+  },
+  getPassSavings() {
+    return this.getTotalPrice() - this.getPassForChoices().price;
+  }
+};
 
 export default function createStores() {
-  document.addEventListener('alpine:init', async () => {
+  document.addEventListener('alpine:init', () => {
     Alpine.store('chosen', chosen);
     Alpine.store('choices', choices);
     Alpine.store('passes', passes);
