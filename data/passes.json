@@ -1,12 +1,10 @@
 {
-  "last_updated": "2023-08-05",
+  "last_updated": "2023-11-23",
   "pass_types": ["Standard", "Premium"],
   "passes": [
-    {"type": "Standard", "num_acts": 2, "price": 520},
     {"type": "Standard", "num_acts": 3, "price": 710},
     {"type": "Standard", "num_acts": 4, "price": 870},
     {"type": "Standard", "num_acts": 5, "price": 1080},
-    {"type": "Premium", "num_acts": 2, "price": 1080},
     {"type": "Premium", "num_acts": 3, "price": 1450},
     {"type": "Premium", "num_acts": 4, "price": 1730},
     {"type": "Premium", "num_acts": 5, "price": 1980}
