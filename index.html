@@ -44,7 +44,7 @@
   <details open>
     <summary>About this site</summary>
     <p>
-      <a href="https://www.klook.com" target="_blank">Klook</a> offers a <a href="https://www.klook.com/activity/78618-taipei-attractions-pass" target="_blank">Klook Pass Taipei</a> that allows access to 2-5 activities in Taipei for a bundle price. There are two types of passes, Standard and Premium, and each pass is valid for 2-5 activities. A Standard pass is only valid for 19 Standard activities, while a Premium pass is valid for an additional 12 Premium activities.
+      <a href="https://www.klook.com" target="_blank">Klook</a> offers a <a href="https://www.klook.com/activity/78618-taipei-attractions-pass" target="_blank">Klook Pass Taipei</a> that allows access to 3-5 activities in Taipei for a bundle price. There are two types of passes, Standard and Premium, and each pass is valid for 3-5 activities. A Standard pass is only valid for 17 Standard activities, while a Premium pass is valid for an additional 12 Premium activities.
     </p>
     <p>
       This is a simple tool to help you:
@@ -57,7 +57,7 @@
     <h2>How to use this site</h2>
     <ol>
       <li>Look through the list of activities in the table below or on the <a href="https://www.klook.com/activity/78618-taipei-attractions-pass" target="_blank">Klook Pass Taipei</a> webpage.</li>
-      <li>Choose two or more activities by checking the checkbox in the <em>Choice</em> column in the Choices table. Your choices will show up in the <em>Chosen activities</em> section. To remove a chosen activity, uncheck the checkbox beside the activity name. You can only select a maximum of 5 activities.</li>
+      <li>Choose three or more activities by checking the checkbox in the <em>Choice</em> column in the Choices table. Your choices will show up in the <em>Chosen activities</em> section. To remove a chosen activity, uncheck the checkbox beside the activity name. You can only select a maximum of 5 activities.</li>
       <li>The <em>Suggested pass</em> section will recommend a pass, as well as the potential savings over booking each activity seperately.</li>
     </ol>
     <h2>Available pass types</h2>
@@ -108,12 +108,12 @@
     </div>
     <div>
       <h2>Suggested pass</h2>
-      <template x-if="$store.chosen.all.length < 2">
+      <template x-if="$store.chosen.all.length < 3">
         <ul>
-          <li>Choose two or more activities for this site to recommend a pass.</li>
+          <li>Choose three or more activities for this site to recommend a pass.</li>
         </ul>
       </template>
-      <template x-if="$store.chosen.all.length >= 2">
+      <template x-if="$store.chosen.all.length >= 3">
         <ul>
           <li><span x-text="$store.chosen.getPassForChoices().type"></span> for <span x-text="$store.chosen.getPassForChoices().num_acts"></span> activties, <span x-text="$store.chosen.getPassForChoices().price"></span> NTD</li>
             <template x-if="$store.chosen.getPassSavings() >= 0">

@@ -62,8 +62,8 @@ const chosen = {
     return choiceInfo.reduce((total, current) => total + current.Price, 0);
   },
   getPassForChoices() {
-    if (this.all.length < 2) {
-      // No valid pass for less than two chosen activities.
+    if (this.all.length < 3) {
+      // No valid pass for less than three chosen activities.
       return {'type': 'Invalid', num_acts: 0, price: 0}
     }
 
